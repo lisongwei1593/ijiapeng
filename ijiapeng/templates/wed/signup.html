@@ -11,69 +11,74 @@
 		 <h3>Signup Page</h3>
 	      <div class="login-signup-form">
 				<div class="col-md-6 login text-center">
-					<h4>login</h4>
-					<div class="how_to">
-						<a href="#"><div class="reg_fb"><img src="{% static "images/facebook.png" %}" alt=""><i>Facebook</i><div class="clearfix"></div></div></a>
-						<a href="#"><div class="reg_gp"><img src="{% static "images/gp.png" %}" alt=""><i>GOOGLE</i><div class="clearfix"></div></div></a>
-						<p><img src="{% static "images/locked.png" %}" alt="" />Be assured, we do not store your password</p>
-					</div>
-					<h5>OR</h5>
+					<h4>登陆</h4>
+					<form class="form-horizontal" action="" method="post">  
+			            {% csrf_token %}  
 					<div class="cus_info_wrap">
 						<label class="labelTop">
-						Email:
+						用户名:
 						<span class="require">*</span>
 						</label>
-						<input type="text" value="">
+						{{form.username}}
+						<p>{{ form.username.errors.as_text }}</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="cus_info_wrap">
 						<label class="labelTop">
-						Password:
+						密码:
 						<span class="require">*</span>
 						</label>
-						<input type="password" value="">
+						{{form.password}}
+						<p>{{ form.password.errors.as_text }}</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="sky-form">
-					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Remember me on this computer </label>
 				</div>
 				<div class="botton1">
-					<input type="submit" value="SIGNIN" class="botton">
+					<input type="submit" value="登陆" class="botton">
 				</div>
-				<div class="forgetit">
-					<a href="">forgot your password?</a>
-					<input type="text" class="text" value="Enter email to reset it" onfocus="this.value = '';" onblur="if (this.value == 'Enter email to reset it') {this.value = 'Enter email to reset it';}">
-					<input type="submit" value="SUBMIT" class="botton">
+		 {% if password_is_wrong %}  
+        <div class="alert alert-error">  
+            <span style="color:#00B198">用户名或密码错误</span>
+        </div>  
+        {% endif %} 
+			        </form>  
 				</div>
-				</div>
+				<form class="form-horizontal" action="{% url 'love:regist' %}" method="post">  
+				{% csrf_token %}
 				<div class="col-md-6 sign-up text-center">
-					<h4>signup</h4>
+					<h4>注册</h4>
 					<div class="cus_info_wrap">
 						<label class="labelTop">
-						Email Id:
+						用户名:
 						<span class="require">*</span>
 						</label>
-						<input type="text" value="">
+						{{register_form.username}}
+						<p>{{ register_form.username.errors.as_text }}</p>
 					</div>
 					<div class="clearfix"></div>
 				    <div class="cus_info_wrap">
 						<label class="labelTop">
-						Password:
+						密码:
 						<span class="require">*</span>
 						</label>
-						<input type="password" value="">
+						{{register_form.password}}
+						<p>{{ register_form.password.errors.as_text }}</p>
 					</div>
 					<div class="clearfix"></div><div class="cus_info_wrap">
 						<label class="labelTop confirmpass">
-						Conform Password:
+						确认密码:
 						<span class="require">*</span>
 						</label>
-						<input type="password" value="">
+						{{register_form.confirm_password}}
+						<p>{{ register_form.confirm_password.errors.as_text }}</p>
 					</div>
 					<div class="botton1 two">
-					<input type="submit" value="SIGNIN" class="botton">
+					<input type="submit" value="注册" class="botton">
+				    </div>
+					{{register_form.non_field_errors.as_text}}
 				</div>
-				</div>
+				</form> 
 				<div class="clearfix"></div>
 			</div>
 		</div>

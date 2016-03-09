@@ -124,22 +124,6 @@ form.navbar-form.navbar-right {
 .form-control,.btn {
   border-radius: inherit !important;
 }
-/* Sweep To Bottom */
-.hvr-sweep-to-bottom {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
 .hvr-sweep-to-bottom:before {
   content: "";
   position: absolute;
@@ -161,7 +145,7 @@ form.navbar-form.navbar-right {
   transition-timing-function: ease-out;
 }
 .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
-  color: white;
+  text-decoration:underline;
 }
 .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
   -webkit-transform: scaleY(1);
@@ -198,9 +182,6 @@ a.sign {
   -ms-background-size: cover;
   min-height: 722px;
 }
-.banner-navigation {
-  background-color: #2F3338;
-}
 .top-menu{
 	float:right;
 	margin-right: -1px;
@@ -217,7 +198,7 @@ a.sign {
 }
 .top-menu ul li a{
 	font-size: 0.9em;
-	 color: #00B198;
+	 color: #fff;
 	text-decoration:none;
 	padding:30px 12px 31px;
 	transition:.5s all;
@@ -228,7 +209,6 @@ a.sign {
 }
 .top-menu ul li.cap a{
 	text-decoration:none;
-	  background: #00B198;
 	color:#fff;
 }
 .top-menu ul li a:hover{
@@ -1119,17 +1099,13 @@ h3.bars {
 .botton1 :hover,.botton:hover{
     background-color: #2F3338;
 }
-.labelTop.confirmpass {
-	margin-top: -9px;
-	line-height: 1;
-}
 .sign-up.text-center {
 	border: 1px solid #D6D6D6;
 	border-left:none;
 	padding: 2em 0 0 0;
-    min-height: 496px;
+    min-height: 320px;
 }
-.sign-up h4{
+h4{
 	margin-bottom:2em;
 }
 .forgetit a {
@@ -1205,10 +1181,9 @@ color: #000;
 .login.text-center {
 	border: 1px solid #D6D6D6;
 	padding: 2em 0 0 0;
-	min-height: 456px;
+	min-height: 320px;
 }
 .botton1 {
-	margin-right: 8.5em;
 	margin-top:1.5em;
 }
 .labelTop {
@@ -1217,7 +1192,7 @@ color: #000;
 	text-align: left;
 	  color: #2C3E50;
 	float: left;
-	width: 29%;
+	width: 15%;
 	font-weight: 400;
 }
 .reg_gp {
