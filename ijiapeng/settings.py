@@ -95,5 +95,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/home/ubuntu/ijiapeng/ijiapeng/ijiapeng/site_static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/ubuntu/ijiapeng/ijiapeng/ijiapeng/media/'
 from ijiapeng.local_settings import *
