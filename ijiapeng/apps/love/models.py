@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-s
 from django.db import models
 from django.contrib.auth.models import User
-from wx import BLACK
-from wx.lib.pydocview import Blank
 
 class Comment(models.Model):
     user = models.ForeignKey(User, related_name='user_pickup_addr_user', db_index=True,
