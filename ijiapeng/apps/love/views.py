@@ -30,7 +30,7 @@ def login(request):
             user = auth.authenticate(username=username, password=password)  
             if user is not None and user.is_active:  
                 auth.login(request, user)  
-                return redirect('/')
+                return HttpResponseRedirect(request.GET.get('next'))
             else:  
                 return render_to_response('wed/signup.html', RequestContext(request, {'form': form,'password_is_wrong':True}))  
         else:  
