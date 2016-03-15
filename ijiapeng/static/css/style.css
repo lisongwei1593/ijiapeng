@@ -5,9 +5,27 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html, body{
-font-family: 'Lora', serif;
+font-family:微软雅黑;
 	font-size: 100%;
 	background: #FFf;
+}
+.comment_pic{
+	float:left;
+}
+.comment_content{
+	padding-left: 60px;
+}
+.comment_content header{
+	font-weight: bold;
+}
+.comment_replay{
+	padding-left: 80px;
+	font-style: italic;
+    margin-top: 10px;
+}
+.pagination{
+    text-align: center;
+    width: 100%;
 }
 body a,.grid_1,plan_1,plan_1.one,plan_1.two,i.icon1, i.icon2, i.icon3, i.icon4, i.icon5, i.icon6 {
 	transition:0.5s all;

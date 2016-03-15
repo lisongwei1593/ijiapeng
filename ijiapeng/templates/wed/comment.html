@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block title %}
+<title>留言</title>
+{% endblock %}
+{% block main %}
+<!--/signup-section-->
+<div class="signup-section">
+	<div class="container">
+	<h3>Comments & Wish</h3>
+	<div class="contact-content">
+	<form id="comment_form" action="{% url 'love:comment' %}" method="post">
+	{% csrf_token %} 
+	<div>
+        <textarea name="comment_text" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '留言';}">留言</textarea>
+    </div>  
+    <div class="submit"> 
+        <input type="submit" value="留言" />
+    </div>
+    </form>
+    </div>
+	{% for comment in comments %}
+	<div style="margin-bottom:20px">
+	   <div class="comment_pic"><img src="{% static "images/vd.gif" %}" alt="头像"></div>
+	   <div class="comment_content">
+	   <header><span>{{comment.user.username}} {{comment.created_datetime|date:'Y-m-d H:i:s'}}</span></header>
+	   <div>{{ comment.text }}</div>
+	   </div>
+	   {% if comment.reply %}
+	   <div class="comment_replay">
+       <div>回复:{{ comment.reply }}</div>
+	   </div>
+	   {% endif %}
+	   {% if user.is_superuser %}
+	   <div class="contact-content">
+	   <form id="reply_form" action="{% url 'love:reply_comment' %}" method="post">
+	    {% csrf_token %} 
+	    <input style="display:none" name="comment_id" value="{{comment.id}}"/>
+	    <div>
+	        <textarea style="height:70px" name="reply_text" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '回复';}">回复</textarea>
+	    </div>  
+	    <div class="submit"> 
+	        <h1 class="t-button">
+	            <a id="vvv" href="javascript:{}" onclick="this.parentNode.parentNode.parentNode.submit();"><span class="label label-success">回复</span></a>
+                <a href="{% url 'love:del_comment' cid=comment.id %}"><span class="label label-danger">删除</span></a>
+            </h1>
+	    </div>
+	    </form>
+	    </div>
+	   {% endif %}
+	</div>
+    {% endfor %}
+    <div class="pagination">
+	    <span class="step-links">
+            <a href="?page=1">首页</a>
+	        {% if comments.has_previous %}
+	            <a href="?page={{ comments.previous_page_number }}">上一页</a>
+	        {% endif %}
+	
+	        <span class="current">
+	            第 {{ comments.number }} 页，共 {{ comments.paginator.num_pages }}页
+	        </span>
+	
+	        {% if comments.has_next %}
+	            <a href="?page={{ comments.next_page_number }}">下一页</a>
+	        {% endif %}
+            <a href="?page=0">尾页</a>
+	    </span>
+	</div>
+	</div>
+</div>
+{% endblock %}
