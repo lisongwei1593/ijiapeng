@@ -16,9 +16,9 @@
                         <div class="top-menu">
                                 <ul class="nav">
                                     <li class="hvr-sweep-to-bottom cap"><a href="{% url 'love:index' %}" {% if page_name == 'home' %}style="text-decoration: underline;"{% endif %}>首页</a></li>
-                                    <li class="hvr-sweep-to-bottom"><a href="about.html" {% if page_name == 'about' %}style="text-decoration: underline;"{% endif %}>我们</a></li>
-                                    <li class="hvr-sweep-to-bottom"><a href="moments.html" {% if page_name == 'moment' %}style="text-decoration: underline;"{% endif %}>相册</a></li>
-                                    <li class="hvr-sweep-to-bottom"><a href="contact.html" {% if page_name == 'contact' %}style="text-decoration: underline;"{% endif %}>联系</a></li>
+                                    <li class="hvr-sweep-to-bottom"><a href="{% url 'love:about' %}" {% if page_name == 'about' %}style="text-decoration: underline;"{% endif %}>我们</a></li>
+                                    <li class="hvr-sweep-to-bottom"><a href="{% url 'love:moments'%}" {% if page_name == 'moment' %}style="text-decoration: underline;"{% endif %}>相册</a></li>
+                                    <li class="hvr-sweep-to-bottom"><a href="{% url 'love:contact' %}" {% if page_name == 'contact' %}style="text-decoration: underline;"{% endif %}>联系</a></li>
                                     <li class="hvr-sweep-to-bottom"><a href="{% url 'love:comment' %}" {% if page_name == 'comment' %}style="text-decoration: underline;"{% endif %}>留言</a></li>
                                 {% if user.is_authenticated %}
                                 <li style="color:white">{{user}}</li>

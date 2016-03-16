@@ -95,6 +95,21 @@ def reply_comment(request):
         comment.save()
         return redirect("/comment")
     
+
+def about(request):
+    context = {"page_name":"about"}
+    return render(request, 'wed/about.html', context)
+
+
+def contact(request):
+    context = {"page_name":"contact"}
+    return render(request, 'wed/contact.html', context)
+
+
+def moments(request):
+    context = {"page_name":"moments"}
+    return render(request, 'wed/moments.html', context)
+    
     
 @login_required  
 def del_comment(request,cid):
