@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-s
 from django import forms  
-from django.contrib.auth.models import User  
+from ijiapeng.apps.love.models import CustomUser 
   
 class LoginForm(forms.Form):  
     username = forms.CharField(  
@@ -57,7 +57,7 @@ class RegisterForm(forms.Form):
         username = self.cleaned_data['username']
         if ' ' in username or '@' in username:
             raise forms.ValidationError(u'昵称中不能包含空格和@字符')
-        res = User.objects.filter(username=username)
+        res = CustomUser.objects.filter(username=username)
         if len(res) != 0:
             raise forms.ValidationError(u'此昵称已经注册，请重新输入')
         return username
@@ -73,5 +73,5 @@ class RegisterForm(forms.Form):
     def save(self):
         username = self.cleaned_data['username']
         password = self.cleaned_data['password']
-        user = User.objects.create_user(username,None,password)
+        user = CustomUser.objects.create_user(username,None,password)
         user.save()  

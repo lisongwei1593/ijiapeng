@@ -22,7 +22,11 @@
     </div>
 	{% for comment in comments %}
 	<div style="margin-bottom:20px">
+	   {% if user.avatar %}
 	   <div class="comment_pic"><img height="48px" width="48px" src="/media/{{user.avatar}}" alt="头像"></div>
+	   {% else %}
+	   <div class="comment_pic"><img height="48px" width="48px" src="{% static 'images/vd.gif' %}" alt="头像"></div>
+	   {% endif %}
 	   <div class="comment_content">
 	   <header><span>{{comment.user.username}} {{comment.created_datetime|date:'Y-m-d H:i:s'}}</span></header>
 	   <div>{{ comment.text }}</div>

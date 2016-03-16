@@ -12,15 +12,15 @@ from ijiapeng.apps.love.models import Comment
 
 
 def index(request):
-    context = {"page":"home"}
+    context = {"page_name":"home"}
     return render(request, 'wed/index.html', context)
 
 
 def login(request):  
+    register_form = RegisterForm()
     if request.method == 'GET':  
         form = LoginForm()  
-        register_form = RegisterForm()
-        context = {"page":"signin","form": form,"register_form":register_form}
+        context = {"page_name":"signin","form": form,"register_form":register_form}
         return render_to_response('wed/signup.html', RequestContext(request, context))  
     else:  
         form = LoginForm(request.POST)  
@@ -32,9 +32,9 @@ def login(request):
                 auth.login(request, user)  
                 return HttpResponseRedirect(request.GET.get('next'))
             else:  
-                return render_to_response('wed/signup.html', RequestContext(request, {'form': form,'password_is_wrong':True}))  
+                return render_to_response('wed/signup.html', RequestContext(request, {'form': form,'password_is_wrong':True,'register_form':register_form}))  
         else:  
-            return render_to_response('wed/signup.html', RequestContext(request, {'form': form,}))  
+            return render_to_response('wed/signup.html', RequestContext(request, {'form': form,'register_form':register_form}))  
 
 def regist(request):
     if request.method == 'POST':  
@@ -63,6 +63,7 @@ def comment(request):
         all_comments = Comment.objects.all().order_by('-created_datetime')
         page = request.GET.get('page')
         paginator = Paginator(all_comments, 10)
+        page_name = "comment"
         try:
             comments = paginator.page(page)
         except PageNotAnInteger:
