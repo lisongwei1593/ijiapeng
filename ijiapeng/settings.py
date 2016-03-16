@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), x)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -95,7 +95,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/ubuntu/ijiapeng/ijiapeng/ijiapeng/site_static/'
+# STATIC_ROOT = '/home/ubuntu/ijiapeng/ijiapeng/ijiapeng/site_static/'
+STATIC_ROOT = location('site_static')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/ubuntu/ijiapeng/ijiapeng/ijiapeng/media/'
+# MEDIA_ROOT = '/home/ubuntu/ijiapeng/ijiapeng/ijiapeng/media/'
+MEDIA_ROOT = location('media')
+AVATAR_ROOT = 'avatar'
+DEFAULT_AVATAR = '/static/images/avatar.jpg'
+AUTH_USER_MODEL = 'love.CustomUser'
 from ijiapeng.local_settings import *
