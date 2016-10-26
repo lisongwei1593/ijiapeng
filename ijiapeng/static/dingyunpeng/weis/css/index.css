@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/*banner 轮播图*/
+.flexslider {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  zoom: 1; }
+
+.flexslider .slides li {
+  width: 100%;
+  height: 100%; }
+
+.flex-control-nav {
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  bottom: 35px;
+  text-align: center; }
+
+.flex-control-nav li {
+  margin: 10px 2px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+
+.flex-control-paging li a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/dot-b.png") no-repeat;
+  overflow: hidden;
+  text-indent: -99em;
+  cursor: pointer; }
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+  background: url("../images/dot-a.png") no-repeat; }
+
+.flexslider .slides a img {
+  width: 2000px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  margin-top: -225px;
+  left: 50%;
+  margin-left: -1000px;
+  display: block; }
+
+.content-body {
+  background-color: #f4f4f4; }
+  .content-body .container .row {
+    margin-top: 20px; }
+  .content-body .tab {
+    padding: 25px;
+    background-color: #fff; }
+    .content-body .tab h4 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 20px; }
+      .content-body .tab h4 span {
+        color: #666;
+        font-size: 16px;
+        margin-right: 40px;
+        cursor: pointer; }
+      .content-body .tab h4 a {
+        color: #666;
+        font-size: 16px; }
+  .content-body .tab1 {
+    padding: 30px; }
+    .content-body .tab1 h4 span.active {
+      font-size: 20px;
+      color: #333; }
+  .content-body .row .tools {
+    width: 730px;
+    height: 450px;
+    overflow: hidden;
+    margin-right: 20px; }
+    .content-body .row .tools .tools-con {
+      margin-right: -60px;
+      height: 100%;
+      display: none; }
+      .content-body .row .tools .tools-con li {
+        float: left;
+        width: 135px;
+        margin-right: 60px; }
+        .content-body .row .tools .tools-con li a img {
+          width: 120px;
+          height: 120px; }
+  .content-body .tools-con-list {
+    height: 90px; }
+    .content-body .tools-con-list .name {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      white-space: nowrap; }
+      .content-body .tools-con-list .name img {
+        position: relative;
+        top: -1px; }
+    .content-body .tools-con-list .system {
+      margin-bottom: 5px; }
+    .content-body .tools-con-list .support {
+      margin-bottom: 20px; }
+  .content-body .QualityCourse {
+    width: 340px;
+    overflow: hidden;
+    height: 460px; }
+    .content-body .QualityCourse .box {
+      color: #999; }
+      .content-body .QualityCourse .box h5 {
+        font-size: 16px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        white-space: nowrap;
+        width: 340px;
+        overflow: hidden; }
+      .content-body .QualityCourse .box p {
+        line-height: 28px;
+        height: 170px;
+        overflow: hidden; }
+
+.course-banner {
+  width: 340px;
+  height: 420px;
+  position: relative;
+  overflow: hidden; }
+
+.bx-prev {
+  width: 27px;
+  height: 42px;
+  background: url("../images/ad_ctr.png") no-repeat 0 0;
+  overflow: hidden;
+  text-indent: -999999px;
+  z-index: 999;
+  position: absolute;
+  float: left;
+  top: 89px;
+  left: 0; }
+
+.bx-next {
+  width: 27px;
+  height: 42px;
+  background: url("../images/ad_ctr.png") no-repeat 0 -42px;
+  overflow: hidden;
+  text-indent: -999999px;
+  z-index: 999;
+  position: absolute;
+  top: 89px;
+  left: 313px; }
+
+.bx-controls-direction {
+  display: none; }
+
+.resources ul {
+  margin-right: -20px;
+  margin-bottom: -30px; }
+  .resources ul li {
+    float: left;
+    width: 268px;
+    height: 298px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    border: #edeef0 solid 1px;
+    background-color: #fafcff; }
+    .resources ul li a .con-text {
+      color: #333;
+      font-size: 16px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 248px;
+      height: 50px;
+      line-height: 25px;
+      margin-top: 15px;
+      overflow: hidden; }
+    .resources ul li .con-evaluate {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 20px;
+      width: 248px;
+      color: #48c9b0; }
+
+.con-evaluate .ping {
+  margin-left: 15px; }
+
+.channel-group {
+  width: 730px;
+  height: 520px;
+  overflow: hidden;
+  margin-right: 20px; }
+  .channel-group .channel-list {
+    margin-bottom: -30px;
+    margin-right: -46px;
+    height: 100%;
+    display: none; }
+
+.channel-list li {
+  float: left;
+  margin-right: 45px;
+  margin-bottom: 30px; }
+  .channel-list li a {
+    text-align: center;
+    color: #666; }
+    .channel-list li a img {
+      width: 110px;
+      height: 110px; }
+    .channel-list li a p {
+      margin-top: 15px; }
+
+.NewCourse {
+  width: 340px;
+  height: 530px;
+  overflow: hidden; }
+  .NewCourse .NewCourse-list {
+    width: 340px;
+    margin-bottom: 25px; }
+
+.NewCourse-list-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px; }
+  .NewCourse-list-img img {
+    width: 100px;
+    height: 100px; }
+
+.NewCourse-list-con {
+  width: 230px; }
+  .NewCourse-list-con h5 a {
+    font-size: 16px;
+    color: #333;
+    height: 26px;
+    line-height: 25px;
+    width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .NewCourse-list-con p {
+    color: #999;
+    height: 72px;
+    line-height: 24px;
+    width: 230px;
+    overflow: hidden; }

@@ -13,7 +13,8 @@ from ijiapeng.apps.love.models import Comment
 
 def index(request):
     context = {"page_name":"home"}
-    return render(request, 'wed/index.html', context)
+    return redirect("/static/dingyunpeng/index.html")
+#     return render(request, 'dingyunpeng/index.html', context)
 
 
 def login(request):  

@@ -1,0 +1,397 @@
+@charset "UTF-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body,
+button, input, select, textarea {
+  font: 14px/1 "微软雅黑", "Microsoft YaHei", "Helvetica neue", "Helvetica", Arial, Tahoma, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 1; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block; }
+
+a:link, a:visited, a:focus {
+  text-decoration: none; }
+
+img {
+  outline: none;
+  border: none;
+  vertical-align: middle; }
+
+img:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8; }
+
+ul, ol {
+  list-style-type: none; }
+
+input {
+  outline: none; }
+
+/** 重置表单元素 **/
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%; }
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  min-width: 1200px; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.fix {
+  *zoom: 1; }
+
+.fix:after {
+  display: block;
+  content: "clear";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden; }
+
+.top {
+  height: 120px;
+  min-width: 1200px;
+  background-color: #fff;
+  color: #333; }
+  .top .state {
+    font-size: 16px;
+    min-width: 1200px; }
+    .top .state div {
+      margin-top: 20px;
+      position: relative; }
+      .top .state div a {
+        color: #333; }
+      .top .state div a:hover {
+        color: #4ed9be; }
+      .top .state div a.login:after {
+        content: '';
+        display: inline-block;
+        height: 14px;
+        width: 1px;
+        background-color: #b6b6b6;
+        position: absolute;
+        top: 50%;
+        right: 85px;
+        margin-top: -6px; }
+      .top .state div .register {
+        margin-left: 40px; }
+  .top .logo-bar .logo {
+    width: 260px; }
+  .top .logo-bar > ul > li {
+    float: left;
+    height: 40px;
+    line-height: 39px;
+    margin-top: 20px;
+    margin-right: 40px;
+    position: relative; }
+    .top .logo-bar > ul > li a {
+      color: #333;
+      font-size: 20px; }
+    .top .logo-bar > ul > li a:hover {
+      color: #4ed9be; }
+  .top .container > ul > li.last-child {
+    margin-right: 0; }
+  .top .container .search-box {
+    margin-top: 20px;
+    position: relative; }
+    .top .container .search-box .input-text input[type=text] {
+      font-size: 14px;
+      color: #333;
+      width: 345px;
+      height: 18px;
+      line-height: 17px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 11px;
+      border: #dedede 1px solid;
+      border-radius: 5px;
+      background-color: #fff; }
+    .top .container .search-box .input-submit input[type=submit] {
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 36px;
+      height: 38px;
+      line-height: 37px;
+      height: 38px\0;
+      line-height: 37px\0;
+      background: #fff url("../images/search.jpg") no-repeat; }
+
+.infors {
+  position: absolute;
+  top: -10px;
+  right: -5px; }
+
+.footer {
+  min-width: 1200px;
+  background-color: #1abc9c;
+  height: 150px;
+  color: #fff;
+  margin-top: 20px; }
+  .footer .di-logo {
+    width: 170px;
+    margin-right: 50px;
+    position: relative; }
+    .footer .di-logo img {
+      margin-left: 50px;
+      margin-top: 50px; }
+  .footer .di-logo:after {
+    content: '';
+    display: inline-block;
+    height: 80px;
+    width: 1px;
+    background-color: #4ed9be;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -15px; }
+  .footer .content-footer {
+    margin-top: 40px; }
+    .footer .content-footer ul {
+      margin-bottom: 15px; }
+      .footer .content-footer ul li {
+        float: left; }
+        .footer .content-footer ul li a {
+          color: #fff; }
+        .footer .content-footer ul li span {
+          margin-left: 15px;
+          margin-right: 15px; }
+    .footer .content-footer p {
+      margin-bottom: 8px; }
+
+/*fix 滚动*/
+.fix-to-top {
+  width: 36px;
+  height: 77px;
+  position: fixed;
+  left: 50%;
+  margin-left: 620px;
+  bottom: 220px;
+  z-index: 1020; }
+
+.to-top:hover {
+  opacity: .8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); }
+
+.state-box-pupzz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: .6;
+  z-index: 998; }
+
+.state-box-pupbody {
+  box-sizing: border-box;
+  position: absolute;
+  height: 495px;
+  width: 420px;
+  top: 10%;
+  left: 50%;
+  margin-left: -210px;
+  background-color: #fff;
+  z-index: 999; }
+  .state-box-pupbody .state-box-top {
+    height: 70px;
+    line-height: 68px;
+    color: #8c8c8c;
+    text-align: right; }
+    .state-box-pupbody .state-box-top .state-box-closebtn {
+      padding: 0 20px 0 0;
+      font-size: 30px;
+      cursor: pointer; }
+    .state-box-pupbody .state-box-top .state-box-closebtn:hover {
+      color: #666; }
+  .state-box-pupbody .state-box-con {
+    height: 350px;
+    padding: 0 30px; }
+  .state-box-pupbody .state-box-btn {
+    height: 75px;
+    line-height: 73px;
+    background: #f3f3f3;
+    color: #777;
+    text-align: center; }
+    .state-box-pupbody .state-box-btn a {
+      color: #777;
+      background: url("../images/login-weixin.png") left center no-repeat;
+      padding-left: 40px; }
+
+.state-box-con_title {
+  margin-bottom: 40px; }
+  .state-box-con_title .col_tit_l {
+    font-size: 28px;
+    color: #333; }
+  .state-box-con_title .col_tit_r {
+    color: #cdcdcd;
+    font-size: 16px;
+    position: relative;
+    top: 10px; }
+    .state-box-con_title .col_tit_r a {
+      color: #1abc9c; }
+
+.entry .entry-input {
+  margin-top: 10px;
+  width: 360px;
+  height: 40px;
+  position: relative; }
+  .entry .entry-input input {
+    color: #666;
+    background-color: #fff;
+    width: 353px;
+    height: 14px;
+    line-height: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: #e8e8e8 solid 1px;
+    padding-left: 5px;
+    border-radius: 3px; }
+  .entry .entry-input input.error {
+    border: #fcab2b solid 1px; }
+  .entry .entry-input input:focus {
+    border: #1abc9c solid 1px; }
+  .entry .entry-input .warning {
+    height: 100%;
+    line-height: 38px;
+    color: #fcab2b;
+    background: url("../images/notice.png") left center no-repeat;
+    padding-left: 25px;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    z-index: 12; }
+
+.entry .entry-submit {
+  margin-top: 15px;
+  width: 360px;
+  height: 40px; }
+  .entry .entry-submit input {
+    color: #fff;
+    background-color: #1abc9c;
+    width: 360px;
+    height: 40px;
+    line-height: 38px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; }
+
+.login-f-check {
+  margin-top: 15px;
+  padding: 0 5px; }
+  .login-f-check a {
+    color: #1abc9c; }
+
+.piaochecked {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background: url("../images/check.png") no-repeat;
+  text-align: center;
+  position: relative;
+  top: -2px; }
+
+.on_check {
+  background: url("../images/checked.png") no-repeat; }
+
+.checkboxclass {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0; }
+
+.state-box-pupbody {
+  -webkit-animation: movedown 0.6s ease-in-out;
+  -moz-animation: movedown 0.6s ease-in-out;
+  -o-animation: movedown 0.6s ease-in-out;
+  -ms-animation: movedown 0.6s ease-in-out;
+  animation: movedown 0.6s ease-in-out; }
+
+@-webkit-keyframes movedown {
+  0% {
+    -webkit-transform: translateY(-10%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1; } }
+
+@-o-keyframes movedown {
+  0% {
+    -o-transform: translateY(-10%);
+    opacity: 0; }
+  100% {
+    -o-transform: translateY(0);
+    opacity: 1; } }
+
+@-moz-keyframes movedown {
+  0% {
+    -moz-transform: translateY(-10%);
+    opacity: 0; }
+  100% {
+    -moz-transform: translateY(0);
+    opacity: 1; } }
+
+@-ms-keyframes movedown {
+  0% {
+    -ms-transform: translateY(-10%);
+    opacity: 0; }
+  100% {
+    -ms-transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes movedown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }

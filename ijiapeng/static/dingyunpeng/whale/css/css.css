@@ -1,0 +1,36 @@
+body {
+  font-family: "Microsoft YaHei";
+  margin:0 auto;
+  text-align:center;
+  background-color:#eee;
+  color:#000;
+  font-size:36px;
+  font-family:"微软雅黑";
+  }
+
+
+
+
+  
+  
+  
+
+
+#bian{width:1240px;text-align: center;margin:0 auto;}
+
+
+
+li {
+  float: left;
+  width: 400px;
+  overflow: hidden;
+  margin-bottom: 20px;
+   }
+ 
+  
+ li img {
+  width: 380px;
+}
+
+
+#biaot{margin-top:50px;}
