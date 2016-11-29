@@ -16,7 +16,6 @@ $(function(){
     max : 80    //最多移动多少
   });  
 
-
   //轮播
   $box.slide({
     conbox: $(".panes", $box),
@@ -25,13 +24,32 @@ $(function(){
     contag: $(".panes>div", $box)
   });
 
- 
-
   $('body,html').animate({scrollTop:0},500);
 
   $(window).on('resize', function(){
     $home.height( $(window).height() );
   }).trigger('resize');
+
+  var $iconsMouse = $('.icons-mouse');
+  $iconsMouse.on('click', function(){
+    $('body,html').animate({scrollTop: $('.main').height()+'px'},500);
+  });
+
+  var scrollFlag = false;
+  $(window).on('scroll', function(){
+    var scrollTop = $(this).scrollTop();
+    if( scrollTop>20 && scrollFlag === false ){
+      scrollFlag = true;
+      $iconsMouse.css('animation-play-state', 'paused').animate({
+        opacity: 0
+      });
+    }else if(scrollTop<=20 && scrollFlag === true){
+      scrollFlag = false;
+      $iconsMouse.css('animation-play-state', 'running').animate({
+        opacity: 1
+      });
+    }
+  });
 
 });
 

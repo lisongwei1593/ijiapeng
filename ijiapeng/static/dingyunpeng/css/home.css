@@ -24,11 +24,29 @@ li {
 #page-home {
   overflow: hidden;
 }
+
+#page-home .icons-mouse{
+  width: 20px;
+  height: 33px;
+  position: fixed;
+  right: 30px;
+  bottom: 35px;
+  z-index: 99;
+  background: url(../images/icons-mouse.png) no-repeat;
+  animation: mouse-animations .7s ease infinite alternate;
+}
+
+@keyframes mouse-animations{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(0, 6px);}
+}
+
 #page-home .main {
   position: fixed;
   width: 100%;
   height: 100%;
 }
+
 #page-home .main .page-title {
   width: 100%;
   height: 100%;
@@ -110,7 +128,7 @@ li {
           align-items: center;
 }
 #page-list .experience .box {
-  width: 600px;
+  width: 720px;
   height: 300px;
   margin: 0px auto;
   position: relative;
@@ -125,7 +143,7 @@ li {
 #page-list .experience .box .page .details {
   font-size: 14px;
   color: #767884;
-  line-height: 30px;
+  line-height: 26px;
 }
 #page-list .experience .box .slide-title {
   text-align: center;
