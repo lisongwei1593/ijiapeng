@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.leftarea3 {
+  width: 320px;
+  margin-top: 55px; }
+
+.recommend {
+  background-color: #fff;
+  margin-bottom: 20px; }
+  .recommend .recommend-tit h3 {
+    font-size: 20px;
+    padding: 15px 10px 15px 15px; }
+  .recommend .recommend-tit a {
+    background: url("../images/shuaxin.png") left center no-repeat;
+    padding-left: 20px;
+    color: #999;
+    font-size: 16px;
+    position: relative;
+    top: 2px; }
+
+.recommend-infor .recommend-box {
+  padding: 15px 10px 15px 15px;
+  border-top: #f4f4f4 solid 1px; }
+  .recommend-infor .recommend-box .recommend-box-img img {
+    margin-right: 10px;
+    width: 80px;
+    height: 80px; }
+  .recommend-infor .recommend-box .recommend-box-txt h5 {
+    font-size: 16px;
+    margin-bottom: 7px; }
+  .recommend-infor .recommend-box .recommend-box-txt p {
+    color: #999;
+    font-size: 12px;
+    font-family: "新宋体";
+    line-height: 22px;
+    width: 205px;
+    overflow: hidden; }
+  .recommend-infor .recommend-box .recommend-box-txt span {
+    background: url("../images/people-num.png") left center no-repeat;
+    padding-left: 20px;
+    color: #48c9b0;
+    font-size: 13px; }
+
+.rightarea2 {
+  width: 860px;
+  box-sizing: border-box; }
+
+.tab1 h5 {
+  padding-bottom: 25px; }
+  .tab1 h5 span {
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 30px; }
+  .tab1 h5 span.active {
+    color: #333;
+    font-size: 20px; }
+
+.label {
+  background-color: #fff; }
+  .label h3 {
+    font-size: 20px;
+    padding: 15px 10px 15px 15px;
+    border-bottom: #f4f4f4 solid 1px; }
+  .label .label-dd {
+    padding: 15px 10px 15px 15px; }
+    .label .label-dd .dd {
+      float: left;
+      color: #666;
+      padding: 6px;
+      margin-bottom: 8px;
+      margin-right: 10px;
+      border: #f4f4f4 solid 1px;
+      border-radius: 3px; }
+    .label .label-dd .dd-red {
+      color: #ff4848;
+      border: #ff4848 solid 1px; }
+
+.channel-group {
+  padding: 25px 30px 20px;
+  width: 860px;
+  min-height: 520px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative; }
+  .channel-group .channel-list {
+    margin-bottom: -50px;
+    margin-right: -44px;
+    height: 100%;
+    display: none; }
+
+.channel-list li {
+  float: left;
+  margin-right: 43px;
+  margin-bottom: 50px; }
+  .channel-list li a {
+    text-align: center;
+    color: #666; }
+    .channel-list li a img {
+      width: 97px;
+      height: 97px; }
+    .channel-list li a p {
+      margin-top: 15px; }
+
+.channel-num {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #999;
+  font-size: 16px; }
+  .channel-num span {
+    display: none; }

@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter; }
+
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/** 设置默认字体 **/
+button, input, select, textarea, body {
+  background-color: #fff;
+  font: 16px/1 "微软雅黑", "Microsoft YaHei", "Helvetica neue", "Helvetica", Arial, Tahoma, Verdana, sans-serif;
+  position: relative;
+  z-index: 1;
+  font-weight: lighter; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block; }
+
+a:link, a:visited, a:focus {
+  text-decoration: none; }
+
+img {
+  outline: none;
+  border: none;
+  vertical-align: middle; }
+
+ul, ol {
+  list-style-type: none; }
+
+input {
+  outline: none; }
+
+/** 重置表单元素 **/
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%; }
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.fix {
+  *zoom: 1; }
+
+.fix:after {
+  display: block;
+  content: "clear";
+  height: 1px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden; }
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  min-width: 1200px;
+  position: relative;
+  height: 100%; }
+
+.bdr-bottom {
+  border-bottom: #eee solid 1px; }
+
+/*fix 滚动*/
+.fix-to-top {
+  width: 50px;
+  height: 110px;
+  position: fixed;
+  right: 0;
+  bottom: 220px;
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer; }
+
+.to-top {
+  height: 45px;
+  line-height: 45px;
+  background-color: #7b7a7a; }
+
+.to-top:hover {
+  background-color: #1dbaed; }
+
+.header-bar {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .header-bar .logo {
+    margin-left: 40px;
+    margin-right: 100px; }
+    .header-bar .logo img {
+      width: 140px;
+      height: 40px; }
+  .header-bar .collect {
+    margin-right: 40px; }
+    .header-bar .collect a {
+      color: #222; }
+    .header-bar .collect img {
+      position: relative;
+      top: -1px; }
+
+.nav-bar > ul > li {
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  margin: 15px 0 0 15px;
+  border-top: transparent solid 2px;
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -moz-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -ms-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; }
+
+.nav-bar > ul > li.active {
+  background-color: #17b4e7; }
+
+.nav-bar > ul > li.active > a, .nav-bar > ul > li:hover > a {
+  color: #000; }
+
+.nav-bar > ul > li:hover {
+  border-top: #17b4e7 solid 2px; }
+
+.nav-bar > ul > li > a {
+  color: #999;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -moz-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  -ms-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s; }
+
+.nav-bar > ul > li:hover .icon_lists {
+  opacity: 1;
+  visibility: visible; }
+
+.nav-bar ul .icon_lists {
+  position: absolute;
+  top: 63px;
+  left: 50%;
+  margin-left: -82px;
+  width: 164px;
+  background-color: #fff;
+  border-top: #e8e8e8 1px solid;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  visibility: hidden; }
+
+.icon_lists a {
+  display: block;
+  height: 40px;
+  line-height: 39px;
+  color: #999;
+  font-size: 14px;
+  padding-left: 30px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: #fff solid 1px;
+  -webkit-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  .icon_lists a span {
+    font: 400 16px/14px consolas;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    -webkit-transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0; }
+
+.icon_lists a:hover {
+  background-color: #eee;
+  padding-left: 50px;
+  color: #222;
+  border-bottom: #e8e8e8 solid 1px; }
+  .icon_lists a:hover span {
+    color: #222;
+    opacity: 1; }
+
+.footer {
+  color: #fff;
+  font-size: 12px;
+  height: 300px;
+  background: url("../images/footer-bg.jpg") center center no-repeat; }
+  .footer .footer-wrapper {
+    height: 250px;
+    box-sizing: border-box; }
+    .footer .footer-wrapper .details {
+      padding-top: 40px; }
+  .footer .footer-info {
+    height: 50px;
+    line-height: 50px;
+    background: #00080c;
+    text-align: center; }
+    .footer .footer-info img {
+      margin-right: 20px;
+      width: 38px;
+      height: 19px; }
+
+.details-con {
+  float: left;
+  margin-right: 70px; }
+  .details-con dt a {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .details-con dd a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px; }
+
+.contact .code {
+  position: relative;
+  top: -15px;
+  text-align: center; }
+  .contact .code img {
+    width: 115px;
+    height: 115px; }
+  .contact .code p {
+    margin-top: 10px; }
+
+.contact .contact-style {
+  position: absolute;
+  bottom: 25px;
+  right: 0; }
+  .contact .contact-style a {
+    margin-left: 35px;
+    width: 31px;
+    height: 31px; }
+  .contact .contact-style a#qq {
+    background: url("../images/qq.png") center center no-repeat; }
+  .contact .contact-style a#weixin {
+    background: url("../images/weixin.png") center center no-repeat; }
+  .contact .contact-style a#weibo {
+    background: url("../images/weibo.png") center center no-repeat; }

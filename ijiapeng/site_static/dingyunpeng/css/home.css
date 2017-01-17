@@ -1,0 +1,212 @@
+body {
+  font-family: "Microsoft YaHei";
+  background: #080910;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrap {
+  width: 1200px;
+  margin: 0px auto;
+}
+#page-home {
+  overflow: hidden;
+}
+
+#page-home .icons-mouse{
+  width: 20px;
+  height: 33px;
+  position: fixed;
+  right: 30px;
+  bottom: 35px;
+  z-index: 99;
+  background: url(../images/icons-mouse.png) no-repeat;
+  animation: mouse-animations .7s ease infinite alternate;
+}
+
+@keyframes mouse-animations{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(0, 6px);}
+}
+
+#page-home .main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#page-home .main .page-title {
+  width: 100%;
+  height: 100%;
+  background: url(../images/index-text.png) no-repeat center 120px;
+  position: absolute;
+  z-index: 5;
+}
+#page-home .main .page-decorate {
+  width: 100%;
+  height: 100%;
+  opacity: 0.34;
+  position: absolute;
+  background: url(../images/index-decorate.png) no-repeat center top;
+  z-index: 3;
+}
+#page-home .main .page-line {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../images/index-line.png) no-repeat center center;
+  z-index: 2;
+}
+#page-list {
+  padding: 0px 30px;
+  position: relative;
+  z-index: 10;
+}
+#page-list section {
+  width: 100%;
+  margin: 0px auto;
+  background: rgba(16, 18, 25, 0.95);
+}
+#page-list section:nth-child(even) {
+  background: rgba(11, 13, 22, 0.95);
+}
+#page-list .about-us {
+  padding: 50px 0px;
+}
+#page-list .about-us .wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#page-list .about-us aside {
+  width: 480px;
+  text-align: center;
+}
+#page-list .about-us .content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 40px;
+}
+#page-list .about-us .content h2 {
+  font-size: 24px;
+}
+#page-list .about-us .content h2 sub {
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+#page-list .about-us .content .details {
+  font-size: 14px;
+  line-height: 32px;
+}
+#page-list .experience {
+  height: 590px;
+  box-sizing: border-box;
+  padding: 50px 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#page-list .experience .box {
+  width: 720px;
+  height: 300px;
+  margin: 0px auto;
+  position: relative;
+}
+#page-list .experience .box .page h2 {
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+#page-list .experience .box .page p {
+  font-size: 16px;
+}
+#page-list .experience .box .page .details {
+  font-size: 14px;
+  color: #767884;
+  line-height: 26px;
+}
+#page-list .experience .box .slide-title {
+  text-align: center;
+}
+#page-list .experience .box .slide-title a {
+  width: 5px;
+  height: 5px;
+  font-size: 5px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+#page-list .experience .box .slide-title .active {
+  position: relative;
+  top: 1px;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+#page-list .works-list {
+  padding: 140px 0 100px;
+}
+#page-list .works-list ul:after {
+  display: table;
+  content: "";
+  clear: both;
+  height: 0;
+}
+#page-list .works-list li {
+  float: left;
+  width: 343px;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  transition : transform .3s ease-out;
+}
+#page-list .works-list li:hover {
+  transform : scale(1.1);
+  /*transform : translateY(-10px);*/
+}
+#page-list .works-list li img {
+  width: 343px;
+  height: 236px;
+}
+#page-list #footer {
+  background: #080910;
+  line-height: 84px;
+}
+#page-list #footer ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#page-list #footer ul li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 14px;
+  color: #60626e;
+  text-align: center;
+}

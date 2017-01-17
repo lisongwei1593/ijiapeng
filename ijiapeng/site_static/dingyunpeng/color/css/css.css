@@ -1,0 +1,76 @@
+body {
+  font-family: "Microsoft YaHei";
+  text-align:center;
+  border:0px solid #000;
+  margin:0 auto;
+  }
+  
+#bian{
+width:100%; 
+height:100px;
+color:#000;
+background: url(../images/01.jpg) center;
+}
+
+
+#bannerA{ 
+width:100%; 
+height:699px;
+background: url(../images/02.jpg) center;
+}
+
+#nrong1{ 
+width:100%; 
+height:260px;
+background: url(../images/03.jpg) center;
+}
+
+#nrong2{ 
+width:100%; 
+height:499px;
+background: url(../images/04.jpg) center;
+}
+
+
+#nrong3{ 
+width:100%; 
+height:499px;
+background: url(../images/05.jpg) center;
+}
+
+#nrong4{ 
+width:100%; 
+height:499px;
+background: url(../images/07.jpg) center;
+}
+
+
+#nrong5{ 
+width:100%; 
+height:499px;
+background: url(../images/08.jpg) center;
+}
+
+#nrong6{ 
+width:100%; 
+height:576px;
+background: url(../images/09.jpg) center;
+}
+
+#nrong7{ 
+width:100%; 
+height:493px;
+background: url(../images/10.jpg) center;
+}
+
+#nrong8{ 
+width:100%; 
+height:565px;
+background: url(../images/11.jpg) center;
+}
+
+#nrong9{ 
+width:100%; 
+height:112px;
+background: url(../images/12.jpg) center;
+}
